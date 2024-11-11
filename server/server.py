@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import util
 import os
+from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='', static_folder='../client')
+
+CORS(app)
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
