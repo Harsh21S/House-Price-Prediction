@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import util
 import os
 
-app = Flask(__name__, static_url_path='', static_folder='client')
+app = Flask(__name__, static_url_path='', static_folder='../client')
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
@@ -26,6 +26,10 @@ def predict_home_price():
     response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response
+
+@app.route('/')
+def home():
+    return app.send_static_file('app.html')
 
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
