@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import util
 import os
 
-app = Flask(__name__)
+app = Flask(__name__static_url_path='', static_folder='client')
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
