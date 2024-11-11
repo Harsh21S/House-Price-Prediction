@@ -28,7 +28,7 @@ function onClickedEstimatePrice() {
 
   // var url = "http://127.0.0.1:5000/predict_home_price";
   var url =
-    "https://house-price-prediction-9how.onrender.com/api/predict_home_price";
+    "https://house-price-prediction-9how.onrender.com/predict_home_price";
 
   $.post(
     url,
@@ -51,7 +51,7 @@ function onPageLoad() {
   console.log("document loaded");
   // var url = "http://127.0.0.1:5000/get_location_names";
   var url =
-    "https://house-price-prediction-9how.onrender.com/api/get_location_names";
+    "https://house-price-prediction-9how.onrender.com/get_location_names";
   $.get(url, function (data, status) {
     console.log("got response for get_location_names request");
     if (data) {
